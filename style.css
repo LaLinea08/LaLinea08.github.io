@@ -41,7 +41,7 @@ h1, h2, h3, p {
 
 p {
   line-height: 1.6;
-  color: #eee; /* slightly lighter than body text */
+  color: #F4E9CD; /* slightly lighter than body text */
 }
 
 /* Project cards (index.html) */
@@ -106,3 +106,4 @@ footer {
   background: #333;
   color: #F4E9CD;
 }
+
