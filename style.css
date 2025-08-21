@@ -10,13 +10,13 @@ body {
 header {
   background: url("TBZS.jpg") no-repeat center center;
   background-size: cover;   /* make it fill nicely */
-  color: white;             /* text readable */
+  color: #F4E9CD;             /* text readable */
   padding: 80px 20px;       /* give space top/bottom */
   text-align: center;
 }
 
 header nav a {
-  color: white;
+  color: #F4E9CD;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -39,7 +39,7 @@ section {
 footer {
   text-align: center;
   padding: 20px;
-  background: #eee;
+  background: #F4E9CD;
 }
 
 a.back-link {
@@ -60,6 +60,7 @@ a.back-link {
 a.back-link:hover {
   background: #f0f0f0;
 }
+
 
 
 
