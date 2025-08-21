@@ -29,7 +29,7 @@ section {
 }
 
 .project {
-  background: white;
+  background: #a0a0a0; /* grayish pastel */
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
@@ -60,6 +60,7 @@ a.back-link {
 a.back-link:hover {
   background: #f0f0f0;
 }
+
 
 
 
