@@ -7,9 +7,10 @@ body {
 }
 
 header {
-  background: #4a90e2;
-  color: white;
-  padding: 20px;
+  background: url("TBZS.jpg") no-repeat center center;
+  background-size: cover;   /* make it fill nicely */
+  color: white;             /* text readable */
+  padding: 80px 20px;       /* give space top/bottom */
   text-align: center;
 }
 
@@ -58,4 +59,5 @@ a.back-link {
 a.back-link:hover {
   background: #f0f0f0;
 }
+
 
