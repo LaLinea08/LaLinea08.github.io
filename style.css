@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   background-color: #4a4a4a; /* darker gray background */
   font-family: Arial, sans-serif;
-  color: #fff; /* change text to white for readability */
+  color: #F4E9CD; /* change text to white for readability */
 }
 
 header {
@@ -60,6 +60,7 @@ a.back-link {
 a.back-link:hover {
   background: #f0f0f0;
 }
+
 
 
 
