@@ -51,7 +51,7 @@ p {
 }
 
 .project {
-  background: #a0a0a0; /* grayish pastel */
+  background: #1E1E24; /* grayish pastel */
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
@@ -60,12 +60,12 @@ p {
   vertical-align: top;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 8px rgba(0,0,0,0.1);
 }
 
 .project:hover {
   transform: scale(1.04);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 7px 15px rgba(0,0,0,0.2);
 }
 
 /* Project page container (project1.html) */
@@ -106,4 +106,5 @@ footer {
   background: #333;
   color: #F4E9CD;
 }
+
 
