@@ -47,6 +47,7 @@ p {
 /* Project cards (index.html) */
 .project-link {
   text-decoration: none;
+  border: 1px solid #F4E9CD;
   color: #1E1E24;
 }
 
@@ -106,6 +107,7 @@ footer {
   background: #333;
   color: #F4E9CD;
 }
+
 
 
 
