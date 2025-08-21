@@ -5,66 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 1: Summerbreak Highlights</title>
   <style>
+    /* Page background matches main portfolio */
     body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-
-  background-color: #4a4a4a; /* match main page */
-  color: #fff; /* light text for readability */
+      font-family: Arial, sans-serif;
+      background-color: #4a4a4a; /* dark gray */
+      color: #fff; /* light text for readability */
+      margin: 0;
+      padding: 0;
     }
 
-    img {
-      max-width: 100%; /* ensures image fits page */
-      border-radius: 8px;
+    /* Container to center content and set max width */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h2, p {
       margin-bottom: 20px;
     }
 
+    /* Images */
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Back button styled for dark background */
     a.back-link {
       display: inline-block;
-      margin-top: 20px;
+      margin-bottom: 20px;
       text-decoration: none;
-      color: #333;
+      color: #fff;
       border: 1px solid #ccc;
       padding: 8px 12px;
       border-radius: 6px;
+      background-color: #333;
       transition: background 0.3s;
     }
 
     a.back-link:hover {
-      background: #212121;
+      background-color: #555;
+    }
+
+    /* Optional: make paragraphs slightly lighter for contrast */
+    p {
+      color: #eee;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <!-- Back to main portfolio link -->
-  <a href="index.html" class="back-link">⬅ Back to Mainpage</a>
+    <!-- Back to main portfolio link -->
+    <a href="index.html" class="back-link">⬅ Back to Mainpage</a>
 
-  <!-- Project title -->
-  <h1>Summerbreak Highlights</h1>
+    <!-- Project title -->
+    <h1>Summerbreak Highlights</h1>
 
-  <!-- Main project image -->
-  <img src="Highlightpic.jpg" alt="Summerbreak Highlights">
+    <!-- Main project image -->
+    <img src="Highlightpic.jpg" alt="Summerbreak Highlights">
 
-  <!-- Project description -->
-  <p>
-    This project is about sharing my summerbreak highlights. You can add multiple paragraphs here,
-    include screenshots, explain what you learned, or describe your process in detail.
-  </p>
+    <!-- Project description -->
+    <p>
+      This project is about sharing my summerbreak highlights. You can add multiple paragraphs here,
+      include screenshots, explain what you learned, or describe your process in detail.
+    </p>
 
-  <!-- Optional additional images -->
-  <img src="Highlightpic2.jpg" alt="Another Summerbreak Image">
+    <!-- Optional additional images -->
+    <img src="Highlightpic2.jpg" alt="Another Summerbreak Image">
 
+  </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
