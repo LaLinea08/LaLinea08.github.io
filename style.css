@@ -12,7 +12,7 @@ body {
   z-index: 0;
 }
 
-/* Dark frosted overlay for milky glas effect */
+/* Dark frosted overlay for milky glass effect */
 body::before {
   content: "";
   position: fixed;
@@ -112,5 +112,6 @@ footer {
   background: #333;
   color: #F4E9CD;
 }
+
 
 
