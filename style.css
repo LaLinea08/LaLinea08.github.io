@@ -8,6 +8,45 @@ body {
   color: #F4E9CD;
 }
 
+header {
+  background: rgba(255, 255, 255, 0.05); /* semi-transparent glass */
+  backdrop-filter: blur(10px);           /* blur background */
+  padding: 40px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+header .header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* floating shadow */
+  /* Optional soft glow */
+  box-shadow: 0 0 15px rgba(255, 207, 153, 0.6);
+}
+
+header .header-text h1 {
+  margin: 0;
+  color: #F4E9CD;
+}
+
+header nav a {
+  margin-left: 15px;
+  color: #F4E9CD;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
 /* Header */
 header {
   background: #F4E9CD;
@@ -116,3 +155,4 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
