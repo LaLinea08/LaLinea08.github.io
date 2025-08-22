@@ -23,12 +23,10 @@ header .header-content {
 }
 
 header .header-logo {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* floating shadow */
-  /* Optional soft glow */
-  box-shadow: 0 0 15px rgba(255, 207, 153, 0.6);
 }
 
 header .header-text h1 {
@@ -155,4 +153,5 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
