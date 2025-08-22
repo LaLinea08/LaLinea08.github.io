@@ -10,9 +10,9 @@ body {
 
 /* Header */
 header {
-  background: url("TBZS.jpg") no-repeat center center;
+  background: #F4E9CD;
   background-size: cover;   /* make it fill nicely */
-  color: #F4E9CD;           /* text readable */
+  color: #1E1E24;           /* text readable */
   padding: 80px 20px;
   text-align: center;
 }
@@ -107,6 +107,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
