@@ -7,52 +7,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Welcome to My Portfolio</h1>
+    <h1>My Portfolio</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="project1.html">Project 1</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m Elia! I’m a student interested in IT, sports, videogames, and many other things. This is my portfolio wich is mostly made just to add diffrent littel entrys in what we did in our englisch lessons but maibe some other things aswell.</p>
-  </section>
-
-  <section id="projects">
+  <!-- Projects -->
+  <section>
     <h2>Projects</h2>
+    <div class="cards-container">
+      <a href="project1.html" class="project-link">
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>A short description of Project 1.</p>
+        </div>
+      </a>
 
-    <!-- Project 1 -->
-    <a href="project1.html" class="project-link">
-      <article class="project">
-        <h3>Project 1: Summerbreak Highlights</h3>
-        <p>Some highlights from my summerbreak.</p>
-        <img src="Highlightpic.jpg" alt="Summerbreak Highlights" width="250">
-      </article>
-    </a>
-
-    <!-- Project 2 -->
-    <a href="project2.html" class="project-link">
-      <article class="project">
-        <h3>Project 2: Coding Assignment</h3>
-        <p>This was my first coding project in class.</p>
-        <img src="CodingAssignment.jpg" alt="Coding Assignment" width="250">
-      </article>
-    </a>
+      <a href="project1.html" class="project-link">
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>A short description of Project 2.</p>
+        </div>
+      </a>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:elia.melliger@edu.tbz.ch">elia.melliger@edu.tbz.ch</a></p>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <p>© 2025 My Portfolio</p>
   </footer>
+
+  <!-- 3D Tilt Script -->
+  <script>
+    const cards = document.querySelectorAll(".project");
+
+    cards.forEach(card => {
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * -10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
