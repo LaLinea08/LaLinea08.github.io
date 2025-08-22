@@ -3,22 +3,21 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #1E1E24; /* unified darker gray background */
+  background-color: #1E1E24;
   font-family: Arial, sans-serif;
-  color: #F4E9CD; /* light text color for readability */
+  color: #F4E9CD;
 }
 
 /* Header */
 header {
   background: #F4E9CD;
-  background-size: cover;   /* make it fill nicely */
-  color: #1E1E24;           /* text readable */
+  color: #1E1E24;
   padding: 80px 20px;
   text-align: center;
 }
 
 header nav a {
-  color: #F4E9CD;
+  color: #1E1E24;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -41,35 +40,45 @@ h1, h2, h3, p {
 
 p {
   line-height: 1.6;
-  color: #F4E9CD; /* slightly lighter than body text */
+  color: #F4E9CD;
 }
 
-/* Project cards (index.html) */
+/* Project cards */
+.cards-container {
+  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .project-link {
   text-decoration: none;
-  color: #1E1E24;
+  color: inherit;
+  display: inline-block;
 }
 
 .project {
-  background: #1E1E24; /* grayish pastel */
+  background: #1E1E24;
   padding: 20px;
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #F4E9CD;
-  display: inline-block;
   width: 300px;
-  vertical-align: top;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.3),
+    0 20px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
 }
 
 .project:hover {
-  transform: scale(1.04);
-  box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+  box-shadow:
+    0 15px 25px rgba(0, 0, 0, 0.4),
+    0 25px 45px rgba(0, 0, 0, 0.3);
 }
 
-/* Project page container (project1.html) */
+/* Project page container */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -107,10 +116,3 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
-
-
-
-
-
-
-
