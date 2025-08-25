@@ -13,7 +13,7 @@ header {
   background: #F4E9CD;
   color: #1E1E24;
   padding: 80px 20px;
-  text-align: center;
+  text-align: left;
 }
 
 header .header-content {
@@ -146,3 +146,4 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
