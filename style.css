@@ -18,8 +18,8 @@ header {
 
 header .header-content {
   display: flex;
-  align-items: left;
-  justify-content: center;
+  align-items: center;
+  justify-content: left;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -146,5 +146,6 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
