@@ -26,6 +26,7 @@ header .header-logo {
   width: 200px;
   height: 100px;
   border-radius: 12px;
+  border: 1px solid #1E1E24;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* floating shadow */
 }
 
@@ -153,6 +154,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
