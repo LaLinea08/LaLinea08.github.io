@@ -91,6 +91,8 @@ p {
     0 20px 35px rgba(0, 0, 0, 0.2);
   transition: transform 0.15s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
+
+  overflow: hidden;
 }
 
 .project:hover {
@@ -146,6 +148,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
