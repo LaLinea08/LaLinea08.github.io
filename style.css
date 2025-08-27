@@ -128,24 +128,21 @@ p {
 /* Back button */
 .back-link {
   position: sticky;
+  top: 100px;
+
+  /* container has 20px left padding; we want a 12px gap from the page edge:
+     12px - 20px = -8px */
+  margin-left: -8px;   /* tweak this to change the gap */
   top: 150px;   /* just below the header */
-  
-  /* Align with container's left edge (container has 20px padding) */
-  left: 50%;                 /* start from center of page */
-  transform: translateX(-50%); /* shift left by half of container width */
-  max-width: 800px;          /* match container max-width */
-  margin-left: -390px;       /* adjust to align with container left edge (half max-width minus small gap) */
+  margin-left: -8px;  /* small gap from left edge */
 
   text-decoration: none;
   font-size: 1.2rem;
-  color: #F4E9CD;
-  background: rgba(0,0,0,0.4);
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: 0.2s ease;
+@@ -144,11 +141,10 @@ p {
   z-index: 1000;
 }
 
+a.back-link:hover {
 .back-link:hover {
   background-color: #555;
 }
@@ -157,6 +154,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
