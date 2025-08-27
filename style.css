@@ -126,16 +126,18 @@ p {
 }
 
 /* Back button */
-a.back-link {
-  display: inline-block;
-  margin-bottom: 20px;
+.back-link {
+  position: fixed;   /* stays in place even when scrolling */
+  top: 20px;         /* distance from top */
+  left: 20px;        /* distance from left */
   text-decoration: none;
-  color: #F4E9CD;
-  border: 1px solid #F4E9CD;
+  font-size: 1.2rem;
+  color: #F4E9CD;    /* adjust to match your theme */
+  background: rgba(0,0,0,0.4); /* optional: semi-transparent bg */
   padding: 8px 12px;
-  border-radius: 6px;
-  background-color: #333;
-  transition: background 0.3s;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  z-index: 1000;     /* makes sure it’s above everything */
 }
 
 a.back-link:hover {
@@ -149,6 +151,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
