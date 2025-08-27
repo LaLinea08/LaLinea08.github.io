@@ -129,7 +129,12 @@ p {
 .back-link {
   position: sticky;
   top: 150px;   /* just below the header */
-  margin-left: -8px;  /* small gap from left edge */
+  
+  /* Align with container's left edge (container has 20px padding) */
+  left: 50%;                 /* start from center of page */
+  transform: translateX(-50%); /* shift left by half of container width */
+  max-width: 800px;          /* match container max-width */
+  margin-left: -390px;       /* adjust to align with container left edge (half max-width minus small gap) */
 
   text-decoration: none;
   font-size: 1.2rem;
@@ -152,6 +157,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
