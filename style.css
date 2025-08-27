@@ -128,7 +128,7 @@ p {
 /* Back button */
 .back-link {
   position: sticky;
-  top: 80px;
+  top: 100px;
 
   /* container has 20px left padding; we want a 12px gap from the page edge:
      12px - 20px = -8px */
@@ -156,6 +156,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
