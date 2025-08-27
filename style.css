@@ -127,10 +127,12 @@ p {
 
 /* Back button */
 .back-link {
-  position: sticky;   /* follows scroll, stops before header */
+  position: sticky;
   top: 80px;
-  left: 0;            /* anchors to left edge */
-  margin-left: 15px;  /* nice distance from edge */
+
+  /* container has 20px left padding; we want a 12px gap from the page edge:
+     12px - 20px = -8px */
+  margin-left: -8px;   /* tweak this to change the gap */
 
   text-decoration: none;
   font-size: 1.2rem;
@@ -146,6 +148,7 @@ a.back-link:hover {
   background-color: #555;
 }
 
+
 /* Footer */
 footer {
   text-align: center;
@@ -153,6 +156,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
