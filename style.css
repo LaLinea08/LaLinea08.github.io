@@ -127,17 +127,17 @@ p {
 
 /* Back button */
 .back-link {
-  position: fixed;   /* stays in place even when scrolling */
-  top: 20px;         /* distance from top */
-  left: 20px;        /* distance from left */
+  position: sticky;   /* follows scroll, but stops at boundary */
+  top: 10px;          /* minimum distance from top of viewport */
+  align-self: flex-start;
   text-decoration: none;
   font-size: 1.2rem;
-  color: #F4E9CD;    /* adjust to match your theme */
-  background: rgba(0,0,0,0.4); /* optional: semi-transparent bg */
-  padding: 8px 12px;
+  color: #F4E9CD;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 12px;
   border-radius: 8px;
   transition: 0.2s ease;
-  z-index: 1000;     /* makes sure it’s above everything */
+  z-index: 1000;
 }
 
 a.back-link:hover {
@@ -151,6 +151,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
