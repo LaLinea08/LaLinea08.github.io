@@ -127,9 +127,11 @@ p {
 
 /* Back button */
 .back-link {
-  position: sticky;   /* follows scroll, but stops at boundary */
-  top: 80px;          /* minimum distance from top of viewport */
-  align-self: flex-start;
+  position: sticky;   /* follows scroll, stops before header */
+  top: 80px;
+  left: 0;            /* anchors to left edge */
+  margin-left: 15px;  /* nice distance from edge */
+
   text-decoration: none;
   font-size: 1.2rem;
   color: #F4E9CD;
@@ -151,6 +153,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
