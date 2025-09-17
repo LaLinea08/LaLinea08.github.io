@@ -109,8 +109,32 @@
       });
     });
   </script>
+    <script>
+  const searchBar = document.getElementById("searchBar");
+  const projects = document.querySelectorAll(".project");
+  const noResults = document.getElementById("noResults");
+
+  searchBar.addEventListener("input", () => {
+    const query = searchBar.value.toLowerCase();
+    let found = false;
+
+    projects.forEach(project => {
+      const text = project.textContent.toLowerCase();
+      if (text.includes(query)) {
+        project.style.display = "block";
+        found = true;
+      } else {
+        project.style.display = "none";
+      }
+    });
+
+    // Show "No results found" if nothing matches
+    noResults.style.display = found ? "none" : "block";
+  });
+</script>
 </body>
 </html>
+
 
 
 
