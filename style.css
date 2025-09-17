@@ -66,10 +66,9 @@ p {
 
 /* Project cards */
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* instead of center */
 }
 
 .project-link {
@@ -155,6 +154,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
