@@ -75,6 +75,7 @@ p {
   color: #F4E9CD;
   font-size: 1rem;
   transition: all 0.2s ease;
+  align-items: center;
 }
 
 #searchBar:focus {
@@ -179,6 +180,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
