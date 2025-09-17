@@ -91,10 +91,10 @@ p {
 
 /* Project cards */
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 10px;             /* space between cards */
-  justify-items: center; /* center each card in its grid cell */
+  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-link {
@@ -180,6 +180,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
