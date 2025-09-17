@@ -64,6 +64,30 @@ p {
   color: #F4E9CD;
 }
 
+#searchBar {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 14px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #F4E9CD;
+  background-color: #1E1E24;
+  color: #F4E9CD;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+#searchBar:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.7);
+}
+
+#noResults {
+  color: #F4E9CD;
+  font-size: 1.1rem;
+}
+
 /* Project cards */
 .cards-container {
   display: grid;
@@ -155,6 +179,7 @@ footer {
   background: #1E1E24;
   color: #F4E9CD;
 }
+
 
 
 
