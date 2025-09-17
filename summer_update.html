@@ -10,64 +10,32 @@
   <!-- Header -->
   <header>
     <div class="header-content">
-    <a href="https://tbz.ch/" target="_blank">
-      <img src="pictures/tbz.png" alt="Logo" class="header-logo">
-    </a>
-    <div class="header-text">
-    <h1>#1 Summer Update</h1>
-    <nav>
-    </nav>
+      <a href="https://tbz.ch/" target="_blank">
+        <img src="pictures/tbz.png" alt="Logo" class="header-logo">
+      </a>
+      <div class="header-text">
+        <h1>#1 Summer Update</h1>
+      </div>
+    </div>
   </header>
 
-  <!-- Project Content -->
+  <!-- Back Button -->
   <a href="index.html" class="back-link">← Back</a>
-<div class="container">
-  <img src="pictures/Highlightpic.jpg" alt="Project image">
-    <p>In my summerbreak i was in italy for about a week. my highlight was the almost daily eveningwalks we did, sadly i only have one picture but atleast its a nice one. my lowlight was that the summerbreak ended and i needed to go back home to work again. </p>
+
+  <!-- Content -->
+  <div class="container">
+    <img src="pictures/Highlightpic.jpg" alt="Project image">
+    <p>
+      In my summer break I was in Italy for about a week.  
+      My highlight was the almost daily evening walks we did.  
+      Sadly, I only have one picture – but at least it’s a nice one.  
+      My lowlight was that the summer break ended and I had to go back home to work again.
+    </p>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 My Portfolio</p>
   </footer>
-
-<!-- 3D Tilt Script -->
-  <script>
-    const cards = document.querySelectorAll(".back-link");
-
-    cards.forEach(card => {
-      card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * 15;
-        const rotateY = ((x - centerX) / centerX) * -15;
-
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
-      });
-
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
-      });
-    });
-  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
