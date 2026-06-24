@@ -78,6 +78,7 @@
       <a href="project7.html" class="project-link">
         <div class="project">
           <h3>#7 Murder in Paradise</h3>
+          <img src="pictures/murder.jpg" alt="Murder Scene Tape" class="project-image">
           <p>A Murder in Paradise</p>
         </div>
       </a>
@@ -112,3 +113,12 @@
           found = true;
         } else {
           link.style.display = "none";
+        }
+      });
+      
+      // Show or hide the "No results found" message
+      noResults.style.display = found ? "none" : "block";
+    });
+  </script>
+</body>
+</html>
