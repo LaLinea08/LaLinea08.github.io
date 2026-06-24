@@ -44,6 +44,7 @@
         </div>
       </a>
 
+      <!-- RESTORED CARD #3 -->
       <a href="storytime.html" class="project-link">
         <div class="project">
           <h3>#3 Storytime</h3>
@@ -84,11 +85,12 @@
         </div>
       </a>
 
+      <!-- UPDATED CARD #8 -->
       <a href="project8.html" class="project-link">
         <div class="project">
-          <h3>#8 Future Predictions</h3>
-          <img src="pictures/futures.jpg" alt="Future Predictions" class="project-image">
-          <p>Some Future Predictions</p>
+          <h3>#8 Freestyle: Building My Website</h3>
+          <img src="pictures/tbz.png" alt="Coding the website" class="project-image">
+          <p>My experience writing, designing, and hosting this portfolio website.</p>
         </div>
       </a>
 
@@ -111,14 +113,13 @@
       projectLinks.forEach(link => {
         const text = link.textContent.toLowerCase();
         if (text.includes(query)) {
-          link.style.display = "flex"; // Must be flex to keep the grid layout working
+          link.style.display = "flex";
           found = true;
         } else {
           link.style.display = "none";
         }
       });
       
-      // Show or hide the "No results found" message
       noResults.style.display = found ? "none" : "block";
     });
   </script>
