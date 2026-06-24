@@ -151,15 +151,48 @@ footer {
   color: #1E1E24;
 }
 
+/* --- INDIVIDUAL PROJECT PAGES (NEW LAYOUT) --- */
 .container {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px 20px 60px 20px;
 }
 
-.container img {
-  max-width: 100%;
+.project-article {
+  background-color: #25252c;             /* Slightly lighter dark background for the card */
+  border: 1px solid #F4E9CD;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+}
+
+.project-article img {
+  width: 100%;
+  max-height: 400px;                     /* Prevents images from becoming overwhelmingly tall */
+  object-fit: cover;                     /* Keeps images looking nice and proportionate */
   border-radius: 8px;
-  display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #F4E9CD;
+}
+
+.project-content strong {
+  color: #ffffff;                        /* Makes bold text (like questions) pop more */
+  display: block;                        /* Puts the question on its own line */
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+  border-left: 3px solid #F4E9CD;        /* Adds a nice stylish line next to questions */
+  padding-left: 10px;
+}
+
+/* Fixes spacing for the very first question */
+.project-content strong:first-child {
+  margin-top: 0;
 }
