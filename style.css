@@ -1,220 +1,70 @@
-/* Global styles */
+/* --- GENERAL PAGE STYLING --- */
 body {
-  height: 100%;
+  background-color: #1a1a1f;             /* Dark background */
+  color: #e1dbbd;                        /* Text color */
+  font-family: Arial, sans-serif;        /* Standard clean font */
   margin: 0;
-  padding: 0;
-  background-color: #1E1E24;
-  font-family: Arial, sans-serif;
-  color: #F4E9CD;
-}
-
-/* Header */
-header {
-  background: #F4E9CD;
-  color: #1E1E24;
-  padding: 20px 20px;
-  text-align: left;
-}
-
-header .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-header .header-logo {
-  width: 250px;
-  height: 125px;
-  border-radius: 12px;
-  border: 1px solid #1E1E24;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-header .header-text h1 {
-  margin: 0;
-  color: #1E1E24;
-}
-
-header nav a {
-  margin-left: 15px;
-  color: #1E1E24;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
+  padding: 20px;
 }
 
 h1, h2, h3, p {
-  margin-bottom: 20px;
+  margin-top: 0;
 }
 
-p {
-  line-height: 1.6;
-  color: #F4E9CD;
+.projects-section {
+  margin-top: 40px;
 }
 
-#searchBar {
-  margin: 20px auto;
-  display: block;
-  padding: 10px 14px;
-  width: 300px;
-  border-radius: 8px;
-  border: 1px solid #F4E9CD;
-  background-color: #1E1E24;
-  color: #F4E9CD;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-  align-items: center;
-}
-
-#searchBar:focus {
-  outline: none;
-  border-color: #F4E9CD;
-  box-shadow: 0 0 8px rgba(244, 233, 205, 0.7);
-}
-
-#noResults {
-  color: #F4E9CD;
-  font-size: 1.1rem;
-}
-
-/* Project cards */
+/* --- PROJECTS GRID SYSTEM --- */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates exactly 2 equal-width columns */
-  gap: 20px;                             /* Spacing between the project cards */
-  justify-content: center;
-  max-width: 700px;                      /* Centers the grid within the section layout */
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* Two perfect, equal columns */
+  gap: 20px;                             /* Space between cards */
+  max-width: 800px;                      /* Centers your grid beautifully */
+  margin: 0 auto;                        /* Centers the container on the page */
+  align-items: stretch;                  /* Keeps row heights completely even */
 }
 
+/* Fixes the link wrapper scaling bug */
 .project-link {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
+  display: flex;
+  text-decoration: none;                 /* Removes default underlines from links */
+  color: inherit;                        /* Keeps the text color from turning blue */
+  width: 100%;
 }
 
+/* Individual Card Adjustments */
 .project {
-  background: #1E1E24;
+  background-color: #1e1e24;             /* Dark card background */
+  border: 1px solid #e1dbbd;             /* Light beige border color */
+  border-radius: 8px;
   padding: 20px;
-  margin: 20px;
-  border-radius: 12px;
-  border: 1px solid #F4E9CD;
-  width: 300px;
+  width: 100%;                           /* Card now fills the entire grid slot */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;                   /* Centers text horizontally */
   text-align: center;
-  box-shadow:
-    0 8px 15px rgba(0, 0, 0, 0.3),
-    0 20px 35px rgba(0, 0, 0, 0.2);
-  transition: transform 0.15s ease, box-shadow 0.3s ease;
-  transform-style: preserve-3d;
-
-  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project:hover {
-  box-shadow:
-    0 15px 25px rgba(0, 0, 0, 0.4),
-    0 25px 45px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);           /* Clean little hover lift effect */
+  box-shadow: 0 4px 15px rgba(225, 219, 189, 0.2);
 }
 
-/* Project images */
+.project h3 {
+  margin-bottom: 15px;
+}
+
 .project-image {
   width: 100%;
-  height: 150px;       /* fixed thumbnail height */
-  object-fit: cover;   /* crops nicely */
-  border: 1px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  object-fit: cover;
 }
 
-/* Project page container */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.project p {
+  margin-top: auto;                      /* Pushes the paragraph text perfectly to the bottom */
 }
-
-.container img {
-  max-width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-/* Back button */
-.back-link {
-  display: inline-block;
-  margin: 20px 20px;
-  padding: 10px 18px;
-  background-color: #1E1E24;   /* dunkler Button */
-  color: #F4E9CD;              /* heller Text */
-  border: 1px solid #F4E9CD;   /* heller Rand */
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.back-link:hover {
-  background-color: #F4E9CD;   /* invertiert beim Hover */
-  color: #1E1E24;
-  border-color: #1E1E24;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-}
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #1E1E24;
-  color: #F4E9CD;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
