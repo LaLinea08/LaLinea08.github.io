@@ -1,56 +1,111 @@
-/* --- GENERAL PAGE STYLING --- */
+/* --- GLOBAL STYLING --- */
 body {
-  background-color: #1a1a1f;             /* Dark background */
-  color: #e1dbbd;                        /* Text color */
-  font-family: Arial, sans-serif;        /* Standard clean font */
+  height: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  background-color: #1E1E24;
+  font-family: Arial, sans-serif;
+  color: #F4E9CD;
 }
 
 h1, h2, h3, p {
   margin-top: 0;
 }
 
-.projects-section {
-  margin-top: 40px;
+/* --- RESTORED HEADER --- */
+header {
+  background: #F4E9CD;
+  color: #1E1E24;
+  padding: 20px 20px;
+  text-align: left;
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header .header-logo {
+  width: 250px;
+  height: 125px;
+  border-radius: 12px;
+  border: 1px solid #1E1E24;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+header .header-text h1 {
+  margin: 0;
+  color: #1E1E24;
+}
+
+/* --- SEARCH BAR --- */
+#searchBar {
+  margin: 40px auto 20px auto;
+  display: block;
+  padding: 10px 14px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #F4E9CD;
+  background-color: #1E1E24;
+  color: #F4E9CD;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+#searchBar:focus {
+  outline: none;
+  border-color: #F4E9CD;
+  box-shadow: 0 0 8px rgba(244, 233, 205, 0.7);
 }
 
 /* --- PROJECTS GRID SYSTEM --- */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two perfect, equal columns */
-  gap: 20px;                             /* Space between cards */
-  max-width: 800px;                      /* Centers your grid beautifully */
-  margin: 0 auto;                        /* Centers the container on the page */
-  align-items: stretch;                  /* Keeps row heights completely even */
+.projects-section {
+  padding: 20px 40px 40px 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Fixes the link wrapper scaling bug */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;                             
+  max-width: 800px;                      
+  margin: 0 auto;                        
+  grid-auto-rows: 1fr;                   /* FORCES ALL ROWS TO BE EXACTLY THE SAME HEIGHT */
+}
+
+/* Wraps the link to expand perfectly */
 .project-link {
   display: flex;
-  text-decoration: none;                 /* Removes default underlines from links */
-  color: inherit;                        /* Keeps the text color from turning blue */
+  text-decoration: none;
+  color: inherit;
   width: 100%;
 }
 
-/* Individual Card Adjustments */
+/* Identical Card Sizing */
 .project {
-  background-color: #1e1e24;             /* Dark card background */
-  border: 1px solid #e1dbbd;             /* Light beige border color */
-  border-radius: 8px;
+  background-color: #1E1E24;
+  border: 1px solid #F4E9CD;
+  border-radius: 12px;
   padding: 20px;
-  width: 100%;                           /* Card now fills the entire grid slot */
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;                   /* Centers text horizontally */
+  align-items: center;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  /* Restores the 3D Tilt capability */
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project:hover {
-  transform: translateY(-5px);           /* Clean little hover lift effect */
-  box-shadow: 0 4px 15px rgba(225, 219, 189, 0.2);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
 }
 
 .project h3 {
@@ -59,12 +114,52 @@ h1, h2, h3, p {
 
 .project-image {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
+  height: 150px;       /* Fixed thumbnail height so images don't break the layout */
+  object-fit: cover;   /* Crops the images nicely so they don't look squished */
+  border-radius: 10px;
   margin-bottom: 15px;
-  object-fit: cover;
 }
 
 .project p {
-  margin-top: auto;                      /* Pushes the paragraph text perfectly to the bottom */
+  margin-top: auto;    /* Pushes text down so text always lines up cleanly at the bottom */
+  line-height: 1.6;
+}
+
+/* --- FOOTER & BACK LINKS --- */
+footer {
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  background: #1E1E24;
+  color: #F4E9CD;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 20px 20px;
+  padding: 10px 18px;
+  background-color: #1E1E24;
+  color: #F4E9CD;
+  border: 1px solid #F4E9CD;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #F4E9CD;
+  color: #1E1E24;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 20px;
 }
