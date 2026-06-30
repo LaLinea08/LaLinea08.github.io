@@ -12,9 +12,11 @@ h1, h2, h3, p {
   margin-top: 0;
 }
 
-/* --- RESTORED HEADER --- */
+/* --- RESTORED HEADER (MILKY GLASS) --- */
 header {
-  background: #F4E9CD;
+  background: rgba(244, 233, 205, 0.75); /* Semi-transparent cream */
+  backdrop-filter: blur(15px);           /* The milky glass blur */
+  -webkit-backdrop-filter: blur(15px);   /* For Safari support */
   color: #1E1E24;
   padding: 20px 20px;
   text-align: left;
@@ -41,7 +43,7 @@ header .header-text h1 {
   color: #1E1E24;
 }
 
-/* --- SEARCH BAR --- */
+/* --- SEARCH BAR (MILKY GLASS) --- */
 #searchBar {
   margin: 40px auto 20px auto;
   display: block;
@@ -49,7 +51,9 @@ header .header-text h1 {
   width: 300px;
   border-radius: 8px;
   border: 1px solid #F4E9CD;
-  background-color: #1E1E24;
+  background-color: rgba(30, 30, 36, 0.5); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #F4E9CD;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -85,10 +89,12 @@ header .header-text h1 {
   width: 100%;
 }
 
-/* Identical Card Sizing */
+/* Identical Card Sizing & Milky Glass Effect */
 .project {
-  background-color: #1E1E24;
-  border: 1px solid #F4E9CD;
+  background-color: rgba(30, 30, 36, 0.4); /* Semi-transparent dark background */
+  backdrop-filter: blur(20px);             /* The milky glass blur */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 233, 205, 0.3); /* Slightly stronger glassy border */
   border-radius: 12px;
   padding: 20px;
   width: 100%;
@@ -146,106 +152,4 @@ footer {
   transition: all 0.3s ease;
 }
 
-.back-link:hover {
-  background-color: #F4E9CD;
-  color: #1E1E24;
-}
-
-/* --- INDIVIDUAL PROJECT PAGES (NEW LAYOUT) --- */
-.container {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 20px 20px 60px 20px;
-}
-
-.project-article {
-  background-color: #25252c;             /* Slightly lighter dark background for the card */
-  border: 1px solid #F4E9CD;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-  margin-top: 10px;
-}
-
-.project-article img {
-  width: 100%;
-  max-height: 400px;                     /* Prevents images from becoming overwhelmingly tall */
-  object-fit: cover;                     /* Keeps images looking nice and proportionate */
-  border-radius: 8px;
-  margin-bottom: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.project-content {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #F4E9CD;
-}
-
-.project-content strong {
-  color: #ffffff;                        /* Makes bold text (like questions) pop more */
-  display: block;                        /* Puts the question on its own line */
-  margin-top: 25px;
-  margin-bottom: 5px;
-  font-size: 1.15rem;
-  border-left: 3px solid #F4E9CD;        /* Adds a nice stylish line next to questions */
-  padding-left: 10px;
-}
-
-/* Fixes spacing for the very first question */
-.project-content strong:first-child {
-  margin-top: 0;
-}
-
-/* --- SUMMER SHADER / LIGHT LEAK EFFECT --- */
-
-/* Top left soft cream glow */
-body::before {
-  content: "";
-  position: fixed;
-  top: -20%;
-  left: -20%;
-  width: 70vw;
-  height: 70vh;
-  /* Uses your cream color but very transparent */
-  background: radial-gradient(circle, rgba(244, 233, 205, 0.1) 0%, rgba(30, 30, 36, 0) 70%);
-  z-index: -1; /* Keeps it behind everything */
-  pointer-events: none; /* Makes sure you can still click your links */
-  filter: blur(60px); 
-}
-
-/* Bottom right warm sunset glow with a slow pulse */
-body::after {
-  content: "";
-  position: fixed;
-  bottom: -30%;
-  right: -10%;
-  width: 80vw;
-  height: 80vh;
-  /* Adds a hidden summer warmth (orange) that blends into your dark background */
-  background: radial-gradient(circle, rgba(255, 140, 0, 0.06) 0%, rgba(30, 30, 36, 0) 70%);
-  z-index: -1;
-  pointer-events: none;
-  filter: blur(80px);
-  animation: summerPulse 8s infinite alternate ease-in-out;
-}
-
-/* The shader animation */
-@keyframes summerPulse {
-  0% { transform: scale(1); opacity: 0.7; }
-  100% { transform: scale(1.1); opacity: 1; }
-}
-
-/* Warm vintage summer filter for all images */
-.project-image, .project-article img {
-  /* Adds warmth (sepia), boosts contrast slightly, and brightens */
-  filter: sepia(0.25) contrast(1.05) brightness(1.05);
-  transition: filter 0.4s ease;
-}
-
-/* Remove the filter when hovering over the card so the original colors pop */
-.project:hover .project-image {
-  filter: sepia(0) contrast(1) brightness(1.1); 
-}
-
-
+.back-link:
