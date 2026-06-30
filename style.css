@@ -6,6 +6,7 @@ body {
   background-color: #1E1E24;
   font-family: Arial, sans-serif;
   color: #F4E9CD;
+  overflow-x: hidden; /* Prevents background animation from causing horizontal scroll */
 }
 
 h1, h2, h3, p {
@@ -195,4 +196,41 @@ footer {
 /* Fixes spacing for the very first question */
 .project-content strong:first-child {
   margin-top: 0;
+}
+
+/* --- DAMASCUS STEEL BACKGROUND EFFECT --- */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  z-index: -1;
+  pointer-events: none;
+  /* Thin, subtle cream rings */
+  background-image: repeating-radial-gradient(
+    ellipse at center,
+    rgba(244, 233, 205, 0.04) 0px,
+    rgba(244, 233, 205, 0.04) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+}
+
+/* Layer 1 */
+body::before {
+  background-size: 200px 300px;
+  animation: damascusFlow 80s linear infinite;
+}
+
+/* Layer 2 (Different size, spinning the other way to create the waves) */
+body::after {
+  background-size: 240px 180px;
+  animation: damascusFlow 120s linear infinite reverse;
+}
+
+@keyframes damascusFlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
