@@ -101,11 +101,11 @@ header .header-text h1 {
   /* Restores the 3D Tilt capability */
   transform-style: preserve-3d;
   transition: transform 0.15s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(244, 233, 205, 0.05);
 }
 
 .project:hover {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(244, 233, 205, 0.15);
 }
 
 .project h3 {
@@ -235,3 +235,17 @@ body::after {
   0% { transform: scale(1); opacity: 0.7; }
   100% { transform: scale(1.1); opacity: 1; }
 }
+
+/* Warm vintage summer filter for all images */
+.project-image, .project-article img {
+  /* Adds warmth (sepia), boosts contrast slightly, and brightens */
+  filter: sepia(0.25) contrast(1.05) brightness(1.05);
+  transition: filter 0.4s ease;
+}
+
+/* Remove the filter when hovering over the card so the original colors pop */
+.project:hover .project-image {
+  filter: sepia(0) contrast(1) brightness(1.1); 
+}
+
+
