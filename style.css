@@ -12,11 +12,9 @@ h1, h2, h3, p {
   margin-top: 0;
 }
 
-/* --- RESTORED HEADER (MILKY GLASS) --- */
+/* --- RESTORED HEADER --- */
 header {
-  background: rgba(244, 233, 205, 0.75); /* Semi-transparent cream */
-  backdrop-filter: blur(15px);           /* The milky glass blur */
-  -webkit-backdrop-filter: blur(15px);   /* For Safari support */
+  background: #F4E9CD;
   color: #1E1E24;
   padding: 20px 20px;
   text-align: left;
@@ -43,7 +41,7 @@ header .header-text h1 {
   color: #1E1E24;
 }
 
-/* --- SEARCH BAR (MILKY GLASS) --- */
+/* --- SEARCH BAR --- */
 #searchBar {
   margin: 40px auto 20px auto;
   display: block;
@@ -51,9 +49,7 @@ header .header-text h1 {
   width: 300px;
   border-radius: 8px;
   border: 1px solid #F4E9CD;
-  background-color: rgba(30, 30, 36, 0.5); /* Semi-transparent dark background */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #1E1E24;
   color: #F4E9CD;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -89,12 +85,10 @@ header .header-text h1 {
   width: 100%;
 }
 
-/* Identical Card Sizing & Milky Glass Effect */
+/* Identical Card Sizing */
 .project {
-  background-color: rgba(30, 30, 36, 0.4); /* Semi-transparent dark background */
-  backdrop-filter: blur(20px);             /* The milky glass blur */
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(244, 233, 205, 0.3); /* Slightly stronger glassy border */
+  background-color: #1E1E24;
+  border: 1px solid #F4E9CD;
   border-radius: 12px;
   padding: 20px;
   width: 100%;
@@ -107,11 +101,11 @@ header .header-text h1 {
   /* Restores the 3D Tilt capability */
   transform-style: preserve-3d;
   transition: transform 0.15s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(244, 233, 205, 0.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project:hover {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(244, 233, 205, 0.15);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
 }
 
 .project h3 {
@@ -152,4 +146,53 @@ footer {
   transition: all 0.3s ease;
 }
 
-.back-link:
+.back-link:hover {
+  background-color: #F4E9CD;
+  color: #1E1E24;
+}
+
+/* --- INDIVIDUAL PROJECT PAGES (NEW LAYOUT) --- */
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px 20px 60px 20px;
+}
+
+.project-article {
+  background-color: #25252c;             /* Slightly lighter dark background for the card */
+  border: 1px solid #F4E9CD;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+}
+
+.project-article img {
+  width: 100%;
+  max-height: 400px;                     /* Prevents images from becoming overwhelmingly tall */
+  object-fit: cover;                     /* Keeps images looking nice and proportionate */
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #F4E9CD;
+}
+
+.project-content strong {
+  color: #ffffff;                        /* Makes bold text (like questions) pop more */
+  display: block;                        /* Puts the question on its own line */
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+  border-left: 3px solid #F4E9CD;        /* Adds a nice stylish line next to questions */
+  padding-left: 10px;
+}
+
+/* Fixes spacing for the very first question */
+.project-content strong:first-child {
+  margin-top: 0;
+}
